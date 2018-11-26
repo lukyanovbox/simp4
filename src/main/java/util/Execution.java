@@ -44,8 +44,7 @@ public class Execution {
          boolean result = ElementService.perform(testableMemory[i][j], action);
 
          if (!result) {
-            System.out.println(String.format("Error in  cell [%d][%d]", i, j));
-            throw new MemoryBusinessException();
+            throw new MemoryBusinessException(String.format("Error in  cell [%d][%d]", i, j));
          }
       }
    }

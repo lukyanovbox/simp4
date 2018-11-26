@@ -2,6 +2,7 @@ package algorithm;
 
 import static com.google.common.collect.ImmutableList.of;
 import exception.MemoryBusinessException;
+import static java.lang.String.format;
 import static model.Action.READ_0;
 import static model.Action.READ_1;
 import static model.Action.WRITE_0;
@@ -33,7 +34,9 @@ public class AlgorithmB {
                      size,
                      finishTime - startTime));
       }
-      catch (MemoryBusinessException ignored) {
+      catch (MemoryBusinessException e) {
+         System.out.println(format("Algorithm B. %s", e.getMessage()));
+
       }
    }
 }

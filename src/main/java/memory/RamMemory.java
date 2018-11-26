@@ -12,7 +12,7 @@ public class RamMemory {
 
       int k = (int) round(sqrt(size));
 
-      Element[][] memory = new SimpleElement[k][k];
+      Element[][] memory = new Element[k][k];
 
       for (int i = 0; i < memory.length; i++) {
          for (int j = 0; j < memory[i].length; j++) {
